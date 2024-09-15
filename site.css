@@ -1,3 +1,4 @@
+
 .box{
 display: inline-grid;
 float: left;
@@ -22,8 +23,11 @@ color: white;}
 h1{
 text-align: center;
 text-decoration: underline;}
+
 body{
-background-color: lightpink;}
+	background-color: lightpink;
+	color: white;
+}
 
 #hobbymenu{
 text-align: center;
@@ -34,3 +38,17 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 width:50%}
+
+#navbar{
+	overflow: hidden;
+	background-color: white;
+	border-bottom: 15px solid lightpink;
+	text-align: center;}
+
+#navbar a{
+	float: left;
+	display: block;
+	color: navy;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;}
