@@ -1,3 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;}
+
+.header{
+	width:100%;
+	height: 80px;
+	display: block;
+	background-color: lightpink;}
+
+.inner_header{
+	width: 1000px;
+	height: 100%;
+	display:block;
+	margin: 0 auto;}
+
+.logo{
+	height: 100%;
+	display:table;
+	float:left;}
+
+.logo h1 {
+	color: white;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Montserrat';
+	font-size: 32px;
+	font-weight: 200;}
+
+.logo h1 span{
+	font-weight: 800;}
+
+.navbar{
+	float: right;
+	height: 100%;}
+
+.navbar a{
+	height: 100%;
+	display: table;
+	float: left;
+	padding: 0px 20px;}
+
+
+
+.navbar a li{
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	color: white;
+	font-family: 'Montserrat';
+	font-size: 16px;}
+
+.navbar a:hover{
+	background: black;}
+
 
 .box{
 display: inline-grid;
@@ -12,26 +70,146 @@ align-items: center;
 border: 5px solid white;
 }
 
-#hobby{
-margin-left: 25%;
-color: white;}
+.box:hover{
+	color: black;}
+
+.hobbies{
+	font-family: 'Montserrat';}
 
 #about{
-margin-right: 13%;
+margin-right: 20%;
 color: white;}
 
-h1{
-text-align: center;
-text-decoration: underline;}
 
 body{
-	background-color: lightpink;
+	background-color: pink;
 	color: white;
 }
 
-#hobbymenu{
-text-align: center;
-text-decoration: underline;}
+.wrapper{
+	display: flex;
+	padding-top: 50px;
+	justify-content: center;}
+
+.collapsible{
+	max-width: 450px;
+	overflow:hidden;
+	font-weight: 500;}
+
+.collapsible input{
+	display:none;}
+
+.collapsible label{
+	position: relative;
+	font-weight: 600;
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
+	display: block;
+	margin-bottom:10px;
+	cursor: pointer;
+	padding: 15px;
+	border-radius:10px;
+	text-align: center;
+	z-index: 1;
+	background: black;
+	font-size: 25px;}
+
+.collapsible label:after{
+	content: "";
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 18px;
+	height: 18px;
+	background: url(arrow.svg) no-repeat 0 0;
+	transition: all 0.3s ease;}
+
+.collapsible input:checked + label:after{
+	transform: rotate(90deg);}
+
+
+.collapsed-text{
+	max-height: 1px;
+	overflow: hidden;
+	border-radius: 4px;
+	line-height: 1.4;
+	position: relative;
+	top: -100%;
+	opacity: 0.5;
+	transition: all 0.3s ease;}
+
+.collapsible input:checked ~ .collapsed-text{
+	max-height: 300px;
+	padding-bottom: 25px;
+	background: black;
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
+	opacity: 1;
+	top: 0;}
+
+.collapsed-text h2{
+	margin-bottom: 10px;
+	padding: 15px 15px 0;
+	color: white;}
+
+.collapsed-text p{
+	padding-left: 15px;
+	padding-right: 15px;
+	color: white;}
+
+.collapsed-text2{
+	max-height: 1px;
+	overflow: hidden;
+	border-radius: 4px;
+	line-height: 1.4;
+	position: relative;
+	top: -100%;
+	opacity: 0.5;
+	transition: all 0.3s ease;}
+
+.collapsible input:checked ~ .collapsed-text2{
+	max-height: 300px;
+	padding-bottom: 25px;
+	background: black;
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
+	opacity: 1;
+	top: 0;}
+
+.collapsed-text2 h2{
+	margin-bottom: 10px;
+	padding: 15px 15px 0;
+	color: white;}
+
+.collapsed-text2 p{
+	padding-left: 15px;
+	padding-right: 15px;
+	color: white;}
+
+.collapsed-text3{
+	max-height: 1px;
+	overflow: hidden;
+	border-radius: 4px;
+	line-height: 1.4;
+	position: relative;
+	top: -100%;
+	opacity: 0.5;
+	transition: all 0.3s ease;}
+
+.collapsible input:checked ~ .collapsed-text3{
+	max-height: 300px;
+	padding-bottom: 25px;
+	background: black;
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
+	opacity: 1;
+	top: 0;}
+
+.collapsed-text3 h2{
+	margin-bottom: 10px;
+	padding: 15px 15px 0;
+	color: white;}
+
+.collapsed-text3 p{
+	padding-left: 15px;
+	padding-right: 15px;
+	color: white;}
 
 #aboutimage{
 display: block;
@@ -39,16 +217,4 @@ margin-left: auto;
 margin-right: auto;
 width:50%}
 
-#navbar{
-	overflow: hidden;
-	background-color: white;
-	border-bottom: 15px solid lightpink;
-	text-align: center;}
 
-#navbar a{
-	float: left;
-	display: block;
-	color: navy;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;}
